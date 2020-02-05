@@ -1,8 +1,8 @@
 using Xunit;
 
-namespace PoC.Stryker.ConsoleApp.Tests
+namespace PoC.Stryker.TempJudge.Tests
 {
-    public class TempAlertMonitorTests
+    public class TempEvaluatorTests
     {
         [Fact]
         public void Test1()

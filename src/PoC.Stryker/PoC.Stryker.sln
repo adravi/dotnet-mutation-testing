@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.Stryker.ConsoleApp", "PoC.Stryker.ConsoleApp\PoC.Stryker.ConsoleApp.csproj", "{719D50C2-DBD7-438B-AFCF-506878669418}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoC.Stryker.TempJudge", "PoC.Stryker.ConsoleApp\PoC.Stryker.TempJudge.csproj", "{719D50C2-DBD7-438B-AFCF-506878669418}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoC.Stryker.ConsoleApp.Tests", "..\..\test\PoC.Stryker.ConsoleApp.Tests\PoC.Stryker.ConsoleApp.Tests.csproj", "{D046DEAA-6AE0-497C-BD95-DCA4B8B72656}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoC.Stryker.TempJudge.Tests", "..\..\test\PoC.Stryker.ConsoleApp.Tests\PoC.Stryker.TempJudge.Tests.csproj", "{D046DEAA-6AE0-497C-BD95-DCA4B8B72656}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
