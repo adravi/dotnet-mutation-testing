@@ -3,9 +3,9 @@ using PoC.Stryker.TempJudge.Domain;
 
 namespace PoC.Stryker.TempJudge
 {
-    public static class TempEvaluator
+    public class TempEvaluator
     {
-        public static TempMonitor GetMonitorBasedOnExpression(Temp tempExpression)
+        public TempMonitor GetMonitorBasedOnExpression(Temp tempExpression)
         {
             return tempExpression switch
             {
@@ -25,9 +25,8 @@ namespace PoC.Stryker.TempJudge
             };
         }
 
-        public static TempVerdict IsExpressionAccurate(TempMonitor monitor)
+        public TempVerdict IsExpressionAccurate(TempMonitor monitor, int realTempValue)
         {
-            var realTempValue = new Random().Next(0, 45);
             var isValueInThreshold = (realTempValue >= monitor.MinTemp) && (realTempValue <= monitor.MaxTemp);
 
             return new TempVerdict

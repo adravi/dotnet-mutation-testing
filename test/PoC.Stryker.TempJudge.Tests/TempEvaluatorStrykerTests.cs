@@ -1,16 +1,16 @@
-using PoC.Stryker.TempJudge.Domain;
+﻿using PoC.Stryker.TempJudge.Domain;
 using Xunit;
 
 namespace PoC.Stryker.TempJudge.Tests
 {
-    public class TempEvaluatorTests
+    public class TempEvaluatorStrykerTests
     {
         [Fact]
         public void GetMonitorBasedOnExpression_ReturnsRightMinMaxValues_GivenExpressionWarm()
         {
             // Given
             var evaluator = new TempEvaluator();
-            
+
             // When
             var monitor = evaluator.GetMonitorBasedOnExpression(Temp.Warm);
 
@@ -24,7 +24,7 @@ namespace PoC.Stryker.TempJudge.Tests
         {
             // Given
             var evaluator = new TempEvaluator();
-            
+
             // When
             var monitor = evaluator.GetMonitorBasedOnExpression(Temp.Chill);
 
@@ -38,7 +38,7 @@ namespace PoC.Stryker.TempJudge.Tests
         {
             // Given
             var evaluator = new TempEvaluator();
-            
+
             // When
             var monitor = evaluator.GetMonitorBasedOnExpression(Temp.Cold);
 
@@ -52,7 +52,7 @@ namespace PoC.Stryker.TempJudge.Tests
         {
             // Given
             var evaluator = new TempEvaluator();
-            
+
             // When
             var monitor = evaluator.GetMonitorBasedOnExpression(Temp.Freezing);
 

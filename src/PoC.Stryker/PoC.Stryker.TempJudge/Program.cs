@@ -9,6 +9,7 @@ namespace PoC.Stryker.TempJudge
         {
             string response;
             TempMonitor monitor = null;
+            var tempEvaluator = new TempEvaluator();
 
             Console.WriteLine("Welcome to the Temperature Judge! (type 'exit' to terminate)");
             do
@@ -21,16 +22,16 @@ namespace PoC.Stryker.TempJudge
                     monitor = response switch
                     {
                         "warm"
-                        => TempEvaluator.GetMonitorBasedOnExpression(Temp.Warm),
+                        => tempEvaluator.GetMonitorBasedOnExpression(Temp.Warm),
 
                         "chill"
-                        => TempEvaluator.GetMonitorBasedOnExpression(Temp.Chill),
+                        => tempEvaluator.GetMonitorBasedOnExpression(Temp.Chill),
 
                         "cold"
-                        => TempEvaluator.GetMonitorBasedOnExpression(Temp.Cold),
+                        => tempEvaluator.GetMonitorBasedOnExpression(Temp.Cold),
 
                         "freezing"
-                        => TempEvaluator.GetMonitorBasedOnExpression(Temp.Freezing),
+                        => tempEvaluator.GetMonitorBasedOnExpression(Temp.Freezing),
 
                         _ => throw new ArgumentOutOfRangeException()
                     };
@@ -43,7 +44,8 @@ namespace PoC.Stryker.TempJudge
                 if (monitor == null) continue;
 
                 // Eval against real temperature
-                var verdict = TempEvaluator.IsExpressionAccurate(monitor);
+                var realTemp = new Random().Next(0, 50);
+                var verdict = tempEvaluator.IsExpressionAccurate(monitor, realTemp);
                 Console.WriteLine($"Actual temperature is {verdict.ActualTemp}");
 
                 // Judgment!
