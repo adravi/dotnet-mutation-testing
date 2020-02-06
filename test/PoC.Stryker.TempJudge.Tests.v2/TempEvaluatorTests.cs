@@ -1,9 +1,10 @@
-﻿using PoC.Stryker.TempJudge.Domain;
+﻿using PoC.Stryker.TempJudge.v2;
+using PoC.Stryker.TempJudge.v2.Domain;
 using Xunit;
 
-namespace PoC.Stryker.TempJudge.Tests
+namespace PoC.Stryker.TempJudge.Tests.v2
 {
-    public class TempEvaluatorStrykerTests
+    public class TempEvaluatorTests
     {
         [Fact]
         public void GetMonitorBasedOnExpression_ReturnsRightMinMaxValues_GivenExpressionWarm()
