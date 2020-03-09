@@ -5,7 +5,7 @@ namespace PoC.Stryker.TempJudge
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             string response;
             TempMonitor monitor = null;
