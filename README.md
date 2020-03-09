@@ -1,5 +1,5 @@
-# Mutation Testing in .NET
-Example of basic NET Core project using Stryker-Mutator
+# Mutation Testing in Net Core
+Example of basic Net Core console app running Stryker-Mutator.
 
 ## Installation:
 
