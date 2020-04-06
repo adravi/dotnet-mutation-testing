@@ -21,17 +21,13 @@ namespace PoC.Stryker.TempJudge
                 {
                     monitor = response switch
                     {
-                        "warm"
-                        => tempEvaluator.GetMonitorBasedOnExpression(Temp.Warm),
+                        "warm" => tempEvaluator.GetMonitorBasedOnExpression(Temp.Warm),
 
-                        "chill"
-                        => tempEvaluator.GetMonitorBasedOnExpression(Temp.Chill),
+                        "chill" => tempEvaluator.GetMonitorBasedOnExpression(Temp.Chill),
 
-                        "cold"
-                        => tempEvaluator.GetMonitorBasedOnExpression(Temp.Cold),
+                        "cold" => tempEvaluator.GetMonitorBasedOnExpression(Temp.Cold),
 
-                        "freezing"
-                        => tempEvaluator.GetMonitorBasedOnExpression(Temp.Freezing),
+                        "freezing" => tempEvaluator.GetMonitorBasedOnExpression(Temp.Freezing),
 
                         _ => throw new ArgumentOutOfRangeException()
                     };
