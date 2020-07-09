@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace PoC.Stryker.TempJudge.Domain
+namespace TempJudge.Domain
 {
     [ExcludeFromCodeCoverage]
     public class TempMonitor
